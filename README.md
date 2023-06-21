@@ -1,7 +1,6 @@
 # SPCSE
 The implementation code of SPCSE. 
 
-## Result on STS Tasks
 ## Results on STS Tasks
 
 | Model                                                                                                                    | STS12      | STS13      | STS14      | STS15      | STS16      | STSb       | SICK-R     | Avg.       |
