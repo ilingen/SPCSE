@@ -1,32 +1,25 @@
 # SPCSE
 The implementation code of SPCSE. 
 
-# Train
-In the following section, we describe how to train a SPCSE model by using our code.
+## Result on STS Tasks
+## Results on STS Tasks
 
-### Requirements
+| Model                                                                                                                    | STS12      | STS13      | STS14      | STS15      | STS16      | STSb       | SICK-R     | Avg.       |
+|--------------------------------------------------------------------------------------------------------------------------|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|
+| [unsup-spcse-bert-base](https://huggingface.co/ilingen/unsup-spcse-bert-base)  | 72.80 | 83.82 | 76.00 | 83.11 | 79.78 | 80.07 |71.34 | 78.13 |
+| [unsup-spcse-bert-large](https://huggingface.co/ilingen/unsup-spcse-bert-large) | 73.85 | 85.83 | 77.68 | 85.05 | 79.17 | 80.79 | 75.04 | 79.63 |
+# Setup
 
-First, install PyTorch by following the instructions from [the official website](https://pytorch.org). To faithfully reproduce our results, please use the correct `1.7.1` version corresponding to your platforms/CUDA versions. PyTorch version higher than `1.7.1` should also work. For example, if you use Linux and **CUDA11** ([how to check CUDA version](https://varhowto.com/check-cuda-version/)), install PyTorch by the following command,
-
-```bash
-pip install torch==1.7.1+cu110 -f https://download.pytorch.org/whl/torch_stable.html
-```
-
-If you instead use **CUDA** `<11` or **CPU**, install PyTorch by the following command,
-
-```bash
-pip install torch==1.7.1
-```
-
-
-Then run the following script to install the remaining dependencies,
-
-```bash
+Install Dependencies
+``` sh
 pip install -r requirements.txt
 ```
-### Generate Soft Positives
-
-We use https://github.com/jasonwei20/eda_nlp
 # Evaluation
 
-Code, data will be avaliable soon.
+To Evaluate Our SPCSE, please run the following script
+``` sh
+python evaluation.py --model_name_or_path ilingen/unsup-spcse-bert-base --pooler cls_before_pooler
+```
+# Train
+
+Our training code, data will be available soon.
