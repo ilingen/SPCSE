@@ -15,7 +15,7 @@ pip install -r requirements.txt
 ```
 # Evaluation
 
-To Evaluate Our SPCSE, please run the following script
+To evaluate our SPCSE, please run the following script
 ``` sh
 python evaluation.py --model_name_or_path ilingen/unsup-spcse-bert-base --pooler cls_before_pooler
 ```
